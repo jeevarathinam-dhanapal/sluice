@@ -316,7 +316,7 @@ module Sluice
           :key    => to_file,
           :body   => local_file
         )
-
+        file.save('x-amz-server-side-encryption' => 'AES256')
         local_file.close
       end
       module_function :upload_file
